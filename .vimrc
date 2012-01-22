@@ -59,8 +59,10 @@ if has("gui_running")
   set guioptions-=m       
 
   " Use the solarized theme
-  set background=light
   colorscheme solarized     
+  set background=dark
+  let g:solarized_contrast="high"
+  let g:solarized_visibility="high" 
 end
 
 " Visualize eof and tabs
@@ -85,4 +87,3 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 
 " ctrlp navigation
 nmap <Leader>n  :CtrlP<CR>
-
