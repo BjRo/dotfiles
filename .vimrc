@@ -87,3 +87,6 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 
 " ctrlp navigation
 nmap <Leader>n  :CtrlP<CR>
+
+" Machine dependend extension for vimrc
+source ~/.vimrc.local
