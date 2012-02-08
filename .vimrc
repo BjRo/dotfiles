@@ -45,6 +45,10 @@ set laststatus=2
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" Highlight trailing spaces
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/	
+highlight ExtraWhitespace ctermbg=DarkRed
+
 if has("gui_running")
   call togglebg#map("<F5>")
 
@@ -72,10 +76,12 @@ nmap <leader>l :set list!<CR>
 " leader u shows gundo
 nmap <leader>u :GundoToggle<CR>
 
-" leader configuration for NERDTree
-nmap <leader>e :NERDTree<CR>
-nmap <leader>c :NERDTreeClose<CR>
+" Configuration for NERDTree
+nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+let NERDTreeChDirMode=2
+let g:NERDTreeMapOpenVSplit = "C-v"
+let g:NERDTreeMapOpenSplit  = "C-s"
 
 " List of most recently used files
 nmap <leader>m :TRecentlyUsedFiles<CR>
