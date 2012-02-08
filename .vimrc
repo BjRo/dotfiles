@@ -7,6 +7,12 @@ filetype plugin indent on
 
 let mapleader = "," 
 
+" No arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
 " VIM mode
 set nocompatible
 
