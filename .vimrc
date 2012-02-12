@@ -97,8 +97,12 @@ nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun     
 nmap <Leader>lt <Plug>RubyTestRunLast 
 
-" ctrlp navigation
+" ctrlp 
 nmap <Leader>n  :CtrlP<CR>
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
