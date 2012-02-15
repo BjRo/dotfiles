@@ -76,10 +76,6 @@ nnoremap <leader><leader> <c-^>
 " Shortcut for expanding to the directory of the currently displayed file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" Visualize eof and tabs
-set listchars=tab:▸\ ,eol:¬ 
-nmap <leader>l :set list!<CR>
-
 " leader u shows gundo
 nmap <leader>u :GundoToggle<CR>
 
