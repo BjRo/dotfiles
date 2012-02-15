@@ -5,7 +5,7 @@ syntax on
 filetype on
 filetype plugin indent on
 
-let mapleader = "," 
+let mapleader = ","
 
 " No arrow keys
 noremap <Up> <nop>
@@ -64,10 +64,10 @@ if has("gui_running")
   set guioptions-=m       
 
   " Use the solarized theme
-  colorscheme solarized     
+  colorscheme solarized
   set background=dark
   let g:solarized_contrast="high"
-  let g:solarized_visibility="high" 
+  let g:solarized_visibility="high"
 end
 
 " Switch between the last two files
@@ -89,6 +89,7 @@ nmap <leader>f :NERDTreeFind<CR>
 let NERDTreeChDirMode=2
 let g:NERDTreeMapOpenVSplit = "C-v"
 let g:NERDTreeMapOpenSplit  = "C-s"
+let g:NERDTreeDirArrows=0
 
 " List of most recently used files
 nmap <leader>m :TRecentlyUsedFiles<CR>
