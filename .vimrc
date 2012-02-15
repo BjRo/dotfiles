@@ -20,6 +20,9 @@ set nocompatible
 set nobackup
 set noswapfile
 
+" Launch shells in interactive mode
+set shellcmdflag=-ic
+
 " Tab settings
 set noexpandtab     " Tabs
 set tabstop=4       " A tab is two colums
