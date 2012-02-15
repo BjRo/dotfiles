@@ -79,6 +79,9 @@ nnoremap <leader><leader> <c-^>
 " Shortcut for expanding to the directory of the currently displayed file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
+" Shortcut for expanding to full filename of the currently displayed file
+cnoremap $$ <C-R>=expand('%')<cr>
+
 " leader u shows gundo
 nmap <leader>u :GundoToggle<CR>
 
