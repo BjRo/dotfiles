@@ -27,12 +27,7 @@ set softtabstop=4   " Amount of columns for backspace
 set shiftwidth=4    " Amount of columns for indentation in n mode
 
 if has("autocmd")
-  autocmd FileType html       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType xml        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType ruby       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType markdown   setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
 end
 
 set autoindent 
@@ -75,6 +70,12 @@ if has("gui_running")
   let g:solarized_visibility="high" 
 end
 
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" Shortcut for expanding to the directory of the currently displayed file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 " Visualize eof and tabs
 set listchars=tab:▸\ ,eol:¬ 
 nmap <leader>l :set list!<CR>
@@ -97,7 +98,7 @@ nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun     
 nmap <Leader>lt <Plug>RubyTestRunLast 
 
-" ctrlp 
+" ctrlp (TODO: Switch back to ctrl-t)
 nmap <Leader>n  :CtrlP<CR>
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
