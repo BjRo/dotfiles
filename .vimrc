@@ -103,10 +103,7 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 
 " ctrlp (TODO: Switch back to ctrl-t)
 nmap <Leader>n  :CtrlP<CR>
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  \ }
+let g:ctrlp_working_path_mode = 0
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
