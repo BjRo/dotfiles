@@ -29,6 +29,34 @@ set tabstop=4       " A tab is two colums
 set softtabstop=4   " Amount of columns for backspace
 set shiftwidth=4    " Amount of columns for indentation in n mode
 
+" don't give the intro message when starting Vim :intro.
+set shortmess+=I
+
+" Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+set formatoptions+=r
+
+" Automatically insert the current comment leader after hitting <Enter> in Insert mode
+set formatoptions+=o
+
+" When formatting text, use the indent of the second line of
+" a paragraph for the rest of the paragraph, instead of the
+" indent of the first line
+set formatoptions+=2
+
+" All the windows are automatically made the same size after
+" splitting or closing a window
+set equalalways
+
+" Splitting a window will put the new window right of the current one
+set splitright
+
+" enable the use of the mouse in terminals
+set mouse=a ttymouse=xterm2
+
+" Indicates a fast terminal connection. More characters will be sent to the
+" screen for redrawing, instead of using insert/delete line commands.
+set ttyfast
+
 if has("autocmd")
   autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
 end
