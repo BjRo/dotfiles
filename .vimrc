@@ -32,12 +32,6 @@ set shiftwidth=4    " Amount of columns for indentation in n mode
 " don't give the intro message when starting Vim :intro.
 set shortmess+=I
 
-" Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
-set formatoptions+=r
-
-" Automatically insert the current comment leader after hitting <Enter> in Insert mode
-set formatoptions+=o
-
 " When formatting text, use the indent of the second line of
 " a paragraph for the rest of the paragraph, instead of the
 " indent of the first line
