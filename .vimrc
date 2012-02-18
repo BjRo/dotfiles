@@ -7,6 +7,8 @@ filetype plugin indent on
 
 let mapleader = ","
 
+colorscheme railscasts
+
 " No arrow keys
 noremap <Up> <nop>
 noremap <Down> <nop>
