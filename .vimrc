@@ -34,11 +34,6 @@ set shiftwidth=4    " Amount of columns for indentation in n mode
 " don't give the intro message when starting Vim :intro.
 set shortmess+=I
 
-" When formatting text, use the indent of the second line of
-" a paragraph for the rest of the paragraph, instead of the
-" indent of the first line
-set formatoptions+=2
-
 " All the windows are automatically made the same size after
 " splitting or closing a window
 set equalalways
