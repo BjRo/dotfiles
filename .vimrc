@@ -48,6 +48,9 @@ set mouse=a ttymouse=xterm2
 " screen for redrawing, instead of using insert/delete line commands.
 set ttyfast
 
+" Search for the word under the cursor
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
 if has("autocmd")
   autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
 end
