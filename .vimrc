@@ -84,12 +84,6 @@ if has("gui_running")
   " Turn of menu and toolbar
   set guioptions-=T        
   set guioptions-=m       
-
-  " Use the solarized theme
-  colorscheme solarized
-  set background=dark
-  let g:solarized_contrast="high"
-  let g:solarized_visibility="high"
 end
 
 " Switch between the last two files
