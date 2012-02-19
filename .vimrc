@@ -73,8 +73,6 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 highlight ExtraWhitespace ctermbg=DarkRed
 
 if has("gui_running")
-  call togglebg#map("<F5>")
-
   " clipboard integration
   set clipboard=unnamed
 
