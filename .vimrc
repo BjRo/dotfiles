@@ -25,6 +25,9 @@ set noswapfile
 " Launch shells in interactive mode
 set shellcmdflag=-ic
 
+" clipboard integration
+set clipboard^=unnamed
+
 " Tab settings
 set noexpandtab     " Tabs
 set tabstop=4       " A tab is two colums
@@ -76,12 +79,6 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 highlight ExtraWhitespace ctermbg=DarkRed
 
 if has("gui_running")
-  " clipboard integration
-  set clipboard=unnamed
-
-  set encoding=utf-8
-  set guifont=Consolas:h16
-
   " Turn of menu and toolbar
   set guioptions-=T        
   set guioptions-=m       
