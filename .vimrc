@@ -9,12 +9,6 @@ let mapleader = ","
 
 colorscheme railscasts
 
-" No arrow keys
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-
 " VIM mode
 set nocompatible
 
