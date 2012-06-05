@@ -1,6 +1,11 @@
 " Fire up pathogen
 call pathogen#infect()
 
+" Configure Powerline
+set encoding=utf-8
+set fillchars+=stl:\ ,stlnc:\
+let g:Powerline_symbols = 'fancy'
+
 syntax on
 filetype on
 filetype plugin indent on
