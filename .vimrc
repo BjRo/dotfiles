@@ -1,3 +1,5 @@
+set term=screen-256color
+
 " Fire up pathogen
 call pathogen#infect()
 
