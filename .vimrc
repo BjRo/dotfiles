@@ -113,9 +113,16 @@ nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun     
 nmap <Leader>lt <Plug>RubyTestRunLast 
 
-" ctrlp (TODO: Switch back to ctrl-t)
+" ctrlp (Switch back to ctrl-t)
 nmap <Leader>n  :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
+
+" Changing splits
+set wmw=0
+nmap <C-J> <C-w>j<C-W>
+nmap <C-K> <C-w>k<C-W>
+nmap <c-h> <c-w>h<c-w>
+nmap <c-l> <c-w>l<c-w>
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
