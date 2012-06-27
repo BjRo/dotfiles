@@ -23,7 +23,7 @@ set nocompatible
 set nobackup
 set noswapfile
 
-" Launch shells in interactive mode
+" Launch shell in interactive mode
 set shellcmdflag=-ic
 
 " clipboard integration
@@ -116,6 +116,8 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 " ctrlp (Switch back to ctrl-t)
 nmap <Leader>n  :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
 " Changing splits
 set wmw=0
