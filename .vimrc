@@ -59,7 +59,7 @@ if has("autocmd")
   autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
 end
 
-set autoindent 
+set autoindent
 set ai
 set wildmode=list:longest
 set foldcolumn=2
@@ -76,13 +76,13 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
 " Highlight trailing spaces
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/	
-highlight ExtraWhitespace ctermbg=DarkRed
+set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 if has("gui_running")
   " Turn of menu and toolbar
-  set guioptions-=T        
-  set guioptions-=m       
+  set guioptions-=T
+  set guioptions-=m
 end
 
 " Switch between the last two files
@@ -109,8 +109,8 @@ let g:NERDTreeDirArrows=0
 nmap <leader>m :TRecentlyUsedFiles<CR>
 
 " Ruby tests
-nmap <Leader>t <Plug>RubyTestRun     
-nmap <Leader>T <Plug>RubyFileRun     
+nmap <Leader>t <Plug>RubyTestRun
+nmap <Leader>T <Plug>RubyFileRun
 nmap <Leader>lt <Plug>RubyTestRunLast 
 
 " ctrlp (Switch back to ctrl-t)
