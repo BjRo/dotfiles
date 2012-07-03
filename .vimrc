@@ -85,6 +85,10 @@ if has("gui_running")
   set guioptions-=m
 end
 
+" Supertab
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
+
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
