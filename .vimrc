@@ -118,7 +118,7 @@ nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun
 nmap <Leader>lt <Plug>RubyTestRunLast 
 
-" ctrlp (Switch back to ctrl-t)
+" ctrlp
 nmap <Leader>n  :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 1
