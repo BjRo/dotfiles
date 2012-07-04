@@ -1,23 +1,15 @@
+set nocompatible
 set term=screen-256color
 
 " Fire up pathogen
 call pathogen#infect()
 
-" Configure Powerline
-set encoding=utf-8
-set fillchars+=stl:\ ,stlnc:\
-let g:Powerline_symbols = 'fancy'
-
 syntax on
-filetype on
 filetype plugin indent on
 
 let mapleader = ","
 
 colorscheme railscasts
-
-" VIM mode
-set nocompatible
 
 " No backup and swap files
 set nobackup
@@ -48,12 +40,13 @@ set splitright
 " enable the use of the mouse in terminals
 set mouse=a ttymouse=xterm2
 
+" show the matched parenthesis for 0.3 seconds
+set showmatch matchtime=3
+highlight MatchParen ctermbg=white
+
 " Indicates a fast terminal connection. More characters will be sent to the
 " screen for redrawing, instead of using insert/delete line commands.
 set ttyfast
-
-" Search for the word under the cursor
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
 if has("autocmd")
   autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
@@ -64,26 +57,30 @@ set ai
 set wildmode=list:longest
 set foldcolumn=2
 set number
+set ruler
 set nowrap
 set showmatch
 set mat=5
 set ignorecase
 set smartcase
-
 set laststatus=2 
-
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-
-" Highlight trailing spaces
-set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 if has("gui_running")
   " Turn of menu and toolbar
   set guioptions-=T
   set guioptions-=m
 end
+
+" Configure Powerline
+set encoding=utf-8
+set fillchars+=stl:\ ,stlnc:\
+let g:Powerline_symbols = 'fancy'
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+" Highlight trailing spaces
+set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
@@ -126,10 +123,10 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " Changing splits
 set wmw=0
-nmap <C-J> <C-w>j<C-W>
-nmap <C-K> <C-w>k<C-W>
-nmap <c-h> <c-w>h<c-w>
-nmap <c-l> <c-w>l<c-w>
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
