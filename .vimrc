@@ -15,8 +15,8 @@ colorscheme railscasts
 set nobackup
 set noswapfile
 
-" Launch shell in interactive mode
-set shellcmdflag=-ic
+" Ensure that shell with environment vars is loaded
+set shell=/bin/sh
 
 " clipboard integration
 set clipboard^=unnamed
