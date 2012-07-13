@@ -22,10 +22,10 @@ set shell=/bin/sh
 set clipboard^=unnamed
 
 " Tab settings
-set noexpandtab     " Tabs
-set tabstop=4       " A tab is two colums
-set softtabstop=4   " Amount of columns for backspace
-set shiftwidth=4    " Amount of columns for indentation in n mode
+set expandtab       " Spaces instead of tabs
+set tabstop=2       " A tab is two colums
+set softtabstop=2   " Amount of columns for backspace
+set shiftwidth=2    " Amount of columns for indentation in n mode
 
 " don't give the intro message when starting Vim :intro.
 set shortmess+=I
@@ -49,8 +49,8 @@ highlight MatchParen ctermbg=white
 set ttyfast
 
 if has("autocmd")
-  autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
+  autocmd BufWritePre *.rb,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
 end
 
 set autoindent
@@ -64,7 +64,7 @@ set showmatch
 set mat=5
 set ignorecase
 set smartcase
-set laststatus=2 
+set laststatus=2
 
 if has("gui_running")
   " Turn of menu and toolbar
@@ -114,7 +114,7 @@ nmap <leader>m :TRecentlyUsedFiles<CR>
 " Ruby tests
 nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun
-nmap <Leader>lt <Plug>RubyTestRunLast 
+nmap <Leader>lt <Plug>RubyTestRunLast
 
 " ctrlp
 nmap <Leader>n  :CtrlP<CR>
