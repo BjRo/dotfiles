@@ -50,7 +50,7 @@ set ttyfast
 
 if has("autocmd")
   autocmd FileType html,css,xml,ruby,yaml setlocal autoindent ts=2 sts=2 sw=2 expandtab
-  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile set filetype=ruby
+  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
 end
 
 set autoindent
