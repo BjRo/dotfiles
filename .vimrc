@@ -116,7 +116,7 @@ nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun
 nmap <Leader>lt <Plug>RubyTestRunLast
 let g:rubytest_cmd_spec = "bundle exec rspec %p"
-let g:rubytest_cmd_example = "bundle exec rspec %p -e '%c'"
+let g:rubytest_cmd_example = "bundle exec rspec %p"
 
 " ctrlp
 nmap <Leader>n  :CtrlP<CR>
