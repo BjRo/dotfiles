@@ -82,6 +82,7 @@ set mat=5
 set ignorecase
 set smartcase
 set laststatus=2
+set vb
 
 if has("gui_running")
   " Turn of menu and toolbar
