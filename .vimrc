@@ -1,5 +1,4 @@
 set nocompatible
-set term=screen-256color
 
 " Fire up pathogen
 call pathogen#infect()
@@ -30,9 +29,11 @@ set shiftwidth=2    " Amount of columns for indentation in n mode
 " don't give the intro message when starting Vim :intro.
 set shortmess+=I
 
-" All the windows are automatically made the same size after
-" splitting or closing a window
-set equalalways
+"allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+"store lots of :cmdline history
+set history=1000
 
 " Splitting a window will put the new window right of the current one
 set splitright
@@ -40,13 +41,31 @@ set splitright
 " enable the use of the mouse in terminals
 set mouse=a ttymouse=xterm2
 
-" show the matched parenthesis for 0.3 seconds
-set showmatch matchtime=3
-highlight MatchParen ctermbg=white
+set incsearch   "find the next match as we type the search
+set hlsearch    "hilight searches by default
+
+set wrap        "dont wrap lines
+set linebreak   "wrap lines at convenient points
 
 " Indicates a fast terminal connection. More characters will be sent to the
 " screen for redrawing, instead of using insert/delete line commands.
 set ttyfast
+
+" 256 colors in terminal
+set term=screen-256color
+set t_Co=256
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+set wildmode=list:longest   "make cmdline tab completion similar to bash
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+
+"dont continue comments when pushing o/O
+set formatoptions-=o
 
 if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
@@ -56,10 +75,8 @@ end
 set autoindent
 set ai
 set wildmode=list:longest
-set foldcolumn=2
 set number
 set ruler
-set nowrap
 set showmatch
 set mat=5
 set ignorecase
