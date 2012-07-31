@@ -44,6 +44,9 @@ set mouse=a ttymouse=xterm2
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
+"toogle search highlighting
+nnoremap <F3> :set hlsearch!<CR>
+
 set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
