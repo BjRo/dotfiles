@@ -104,7 +104,7 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
-highlight Pmenu ctermbg=238 gui=bold
+highlight Pmenu ctermbg=grey gui=bold
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
