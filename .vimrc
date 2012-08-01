@@ -35,11 +35,6 @@ set backspace=indent,eol,start
 "store lots of :cmdline history
 set history=1000
 
-" Window split management
-set splitright
-nmap <leader>j <C-W>j<C-W>_
-nmap <leader>k <C-W>k<C-W>_
-
 " enable the use of the mouse in terminals
 set mouse=a ttymouse=xterm2
 
@@ -149,10 +144,13 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " Changing splits
 set wmw=0
+set splitright
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+noremap <leader>j <C-W>j<C-W>_
+noremap <leader>k <C-W>k<C-W>_
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
