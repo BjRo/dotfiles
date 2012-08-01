@@ -35,8 +35,10 @@ set backspace=indent,eol,start
 "store lots of :cmdline history
 set history=1000
 
-" Splitting a window will put the new window right of the current one
+" Window split management
 set splitright
+nmap <leader>j <C-W>j<C-W>_
+nmap <leader>k <C-W>k<C-W>_
 
 " enable the use of the mouse in terminals
 set mouse=a ttymouse=xterm2
