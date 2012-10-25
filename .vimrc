@@ -67,6 +67,9 @@ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 "dont continue comments when pushing o/O
 set formatoptions-=o
 
+"use decimal number format for auto-increment/-decrement
+set nrformats=
+
 if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
   autocmd BufWritePre *.rb,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
