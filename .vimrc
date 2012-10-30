@@ -144,6 +144,8 @@ nmap <Leader>n  :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_map = '<c-+>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Changing splits
 set wmw=0
