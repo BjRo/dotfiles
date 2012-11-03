@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/zoom"]
 	path = .vim/bundle/zoom
 	url = https://github.com/taku-o/vim-zoom.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
