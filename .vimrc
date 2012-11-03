@@ -139,13 +139,8 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 let g:rubytest_cmd_spec = "bundle exec rspec %p"
 let g:rubytest_cmd_example = "bundle exec rspec %p"
 
-" ctrlp
-nmap <Leader>n  :CtrlP<CR>
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_map = '<c-+>'
-let g:ctrlp_cmd = 'CtrlP'
+" Command-T
+nmap <Leader>n  :CommandT<CR>
 
 " Changing splits
 set wmw=0
