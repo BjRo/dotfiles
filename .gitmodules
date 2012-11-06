@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/command-t"]
 	path = .vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
+[submodule ".vim/bundle/vim-unimpaired"]
+	path = .vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
