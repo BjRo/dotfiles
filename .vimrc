@@ -173,8 +173,8 @@ nnoremap vi/ T/v,
 nnoremap va/ F/v,
 
 " Pasting below or above the current line in normal mode
-:nmap pu :pu<CR>
-:nmap po :pu!<CR>
+:nmap po :pu<CR>
+:nmap pO :pu!<CR>
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
