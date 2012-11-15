@@ -91,6 +91,7 @@ if has("gui_running")
   " Turn of menu and toolbar
   set guioptions-=T
   set guioptions-=m
+  set guifont=Menlo:h16
 end
 
 " Configure Powerline
