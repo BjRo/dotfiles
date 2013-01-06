@@ -146,6 +146,9 @@ nmap <leader>m  :CommandTBuffer<CR>
 nmap <leader>v  :CommandTJump<CR>
 nmap <leader>c  :CommandTTag<CR>
 
+" ctags
+:nnoremap <F5> :!ctags -R<CR>
+
 " Changing splits
 set wmw=0
 set splitright
