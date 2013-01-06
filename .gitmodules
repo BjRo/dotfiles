@@ -1,9 +1,3 @@
-[submodule ".vim/bundle/tmru_vim"]
-	path = .vim/bundle/tmru_vim
-	url = https://github.com/tomtom/tmru_vim.git
-[submodule ".vim/bundle/tlib_vim"]
-	path = .vim/bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule ".vim/bundle/rubytest"]
 	path = .vim/bundle/rubytest
 	url = https://github.com/janx/vim-rubytest.git

@@ -133,9 +133,6 @@ let g:NERDTreeMapOpenVSplit = "C-v"
 let g:NERDTreeMapOpenSplit  = "C-s"
 let g:NERDTreeDirArrows=0
 
-" List of most recently used files
-nmap <leader>m :TRecentlyUsedFiles<CR>
-
 " Ruby tests
 nmap <Leader>t <Plug>RubyTestRun
 nmap <Leader>T <Plug>RubyFileRun
@@ -145,6 +142,9 @@ let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
 
 " Command-T
 nmap <Leader>n  :CommandT<CR>
+nmap <leader>m  :CommandTBuffer<CR>
+nmap <leader>v  :CommandTJump<CR>
+nmap <leader>c  :CommandTTag<CR>
 
 " Changing splits
 set wmw=0
