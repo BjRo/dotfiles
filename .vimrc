@@ -105,9 +105,8 @@ let g:syntastic_auto_loc_list=1
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
-" Supertab
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabDefaultCompletionType = "context"
+" Autocompletion
+set infercase
 highlight Pmenu ctermbg=grey ctermfg=black gui=bold
 
 " Switch between the last two files

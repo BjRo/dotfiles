@@ -28,9 +28,6 @@
 [submodule ".vim/bundle/zoom"]
 	path = .vim/bundle/zoom
 	url = https://github.com/taku-o/vim-zoom.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
