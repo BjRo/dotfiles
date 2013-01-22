@@ -146,6 +146,9 @@ nmap <Leader>lt <Plug>RubyTestRunLast
 let g:rubytest_cmd_spec = "bundle exec rspec %p"
 let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
 
+" Jasmine tests
+let g:jasmine_use_templates=""
+
 " Command-T
 nmap <Leader>n  :CommandT<CR>
 nmap <leader>m  :CommandTBuffer<CR>
