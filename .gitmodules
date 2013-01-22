@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
+[submodule ".vim/bundle/jasmine.vim"]
+	path = .vim/bundle/jasmine.vim
+	url = git@github.com:claco/jasmine.vim.git
