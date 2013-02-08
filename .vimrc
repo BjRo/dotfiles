@@ -73,7 +73,6 @@ set nrformats=
 if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
   autocmd BufWritePre *.rb,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
-  autocmd VimEnter,BufNewFile,BufReadPost * call HardMode()
 end
 
 set autoindent
