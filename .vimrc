@@ -74,6 +74,7 @@ set nrformats=
 if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
   autocmd BufWritePre *.rb,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
+  autocmd VimEnter,BufNewFile,BufReadPost * call HardMode()
 end
 
 set autoindent
@@ -109,6 +110,26 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 " Autocompletion
 set infercase
 highlight Pmenu ctermbg=grey ctermfg=black gui=bold
+
+" Fake '|' as text object
+nnoremap di\| T\|d,
+nnoremap da\| F\|d,
+nnoremap ci\| T\|c,
+nnoremap ca\| F\|c,
+nnoremap yi\| T\|y,
+nnoremap ya\| F\|y,
+nnoremap vi\| T\|v,
+nnoremap va\| F\|v,
+
+" Fake '/' as text object
+nnoremap di/ T/d,
+nnoremap da/ F/d,
+nnoremap ci/ T/c,
+nnoremap ca/ F/c,
+nnoremap yi/ T/y,
+nnoremap ya/ F/y,
+nnoremap vi/ T/v,
+nnoremap va/ F/v,
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -168,25 +189,9 @@ noremap <C-l> <C-w>l
 noremap <leader>j <C-W>j<C-W>_
 noremap <leader>k <C-W>k<C-W>_
 
-" Fake '|' as text object
-nnoremap di\| T\|d,
-nnoremap da\| F\|d,
-nnoremap ci\| T\|c,
-nnoremap ca\| F\|c,
-nnoremap yi\| T\|y,
-nnoremap ya\| F\|y,
-nnoremap vi\| T\|v,
-nnoremap va\| F\|v,
-
-" Fake '/' as text object
-nnoremap di/ T/d,
-nnoremap da/ F/d,
-nnoremap ci/ T/c,
-nnoremap ca/ F/c,
-nnoremap yi/ T/y,
-nnoremap ya/ F/y,
-nnoremap vi/ T/v,
-nnoremap va/ F/v,
+" hardmode
+nnoremap <leader>h <Esc>:call EasyMode()<CR>
+nnoremap <leader>H <Esc>:call HardMode()<CR>
 
 " Pasting below or above the current line in normal mode
 :nmap <leader>p :pu<CR>
