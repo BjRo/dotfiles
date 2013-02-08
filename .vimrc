@@ -158,15 +158,23 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['ruby'] }
 
-" Ruby tests
+" Testing (Ruby & JS tests)
 nmap <Leader>t <Plug>RubyTestRun
-nmap <Leader>T <Plug>RubyFileRun
+nmap <Leader>] <Plug>RubyFileRun
 nmap <Leader>lt <Plug>RubyTestRunLast
+nmap <Leader>T :call RunTestFile()<cr>
 let g:rubytest_cmd_spec = "bundle exec rspec %p"
 let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
-
-" Jasmine tests
 let g:jasmine_use_templates=""
+
+function! RunTestFile(...)
+    let in_jasmine = match(expand("%"), "Spec.js$") != -1
+    if in_jasmine
+      execute "JasmineRedGreen"
+    else
+      execute "normal \<Plug>RubyFileRun"
+    end
+endfunction
 
 " Command-T
 nmap <Leader>n  :CommandT<CR>
