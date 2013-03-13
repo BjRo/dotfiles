@@ -45,8 +45,22 @@ export BUNDLER_EDITOR=vim
 export CC=gcc-4.2
 export CXX=g++-4.2
 
-alias lab='cd ~/Coding/Laboratory/'
-alias dotfiles='cd ~/Coding/dotfiles2/'
+# TMUX
+alias tmux="TERM=screen-256color-bce tmux"
+
+#CDPATH
+export CDPATH=.:~:~/Coding/Laboratory/
+
+# git shortcuts
+alias g='git'
+alias co='git checkout'
+alias st='git status'
+alias br='git branch'
+alias br='git branch'
+alias pull='git pull'
+alias push='git push'
+
+# Bundler shortcuts
 alias be="bundle exec"
 alias bi="bundle install"
 alias bo="bundle open"
@@ -55,3 +69,4 @@ alias lein="nocorrect lein"
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.nuget/bin # Add nuget to PATH
