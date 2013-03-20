@@ -150,9 +150,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Shortcut for expanding to full filename of the currently displayed file
 cnoremap $$ <C-R>=expand('%')<cr>
 
-" Paste mode toggle
-noremap !! :set paste!<CR>
-
 " leader u shows gundo
 nmap <leader>u :GundoToggle<CR>
 
