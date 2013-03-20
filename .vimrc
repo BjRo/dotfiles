@@ -10,6 +10,10 @@ let mapleader = ","
 
 colorscheme railscasts
 
+" encodings
+set encoding=utf-8
+set fileencoding=utf-8
+
 " No backup and swap files
 set nobackup
 set noswapfile
@@ -42,6 +46,9 @@ set incsearch   "find the next match as we type the search
 
 "toogle search highlighting
 nnoremap <F3> :set hlsearch!<CR>
+
+"toogle paste mode
+nnoremap <F2> :set paste!<CR>
 
 set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
@@ -96,7 +103,6 @@ if has("gui_running")
 end
 
 " Configure Powerline
-set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 let g:Powerline_symbols = 'fancy'
 let g:syntastic_enable_signs=1
@@ -186,19 +192,19 @@ nmap <leader>c  :CommandTTag<CR>
 " ctags
 :nnoremap <F5> :!ctags -R<CR>
 
-" Changing splits
+" Splits
 set wmw=0
 set splitright
+
+" Split navigation
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+" Quick split resizing
 noremap <leader>j <C-W>j<C-W>_
 noremap <leader>k <C-W>k<C-W>_
-
-" hardmode
-nnoremap <leader>h <Esc>:call EasyMode()<CR>
-nnoremap <leader>H <Esc>:call HardMode()<CR>
 
 " Pasting below or above the current line in normal mode
 :nmap <leader>p :pu<CR>
