@@ -116,25 +116,30 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set infercase
 highlight Pmenu ctermbg=grey ctermfg=black gui=bold
 
-" Fake '|' as text object
-nnoremap di\| T\|d,
-nnoremap da\| F\|d,
-nnoremap ci\| T\|c,
-nnoremap ca\| F\|c,
-nnoremap yi\| T\|y,
-nnoremap ya\| F\|y,
-nnoremap vi\| T\|v,
-nnoremap va\| F\|v,
+" http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/
+let pairs = { ":" : ":",
+            \ "." : ".",
+            \ "/" : "/",
+            \ '\|' : '\|',
+            \ "*" : "*",
+            \ "-" : "-",
+            \ "_" : "_" }
 
-" Fake '/' as text object
-nnoremap di/ T/d,
-nnoremap da/ F/d,
-nnoremap ci/ T/c,
-nnoremap ca/ F/c,
-nnoremap yi/ T/y,
-nnoremap ya/ F/y,
-nnoremap vi/ T/v,
-nnoremap va/ F/v,
+for [key, value] in items(pairs)
+  exe "nnoremap ci".key." T".key."ct".value
+  exe "nnoremap ca".key." F".key."cf".value
+  exe "nnoremap vi".key." T".key."vt".value
+  exe "nnoremap va".key." F".key."vf".value
+  exe "nnoremap di".key." T".key."dt".value
+  exe "nnoremap da".key." F".key."df".value
+  exe "nnoremap yi".key." T".key."yt".value
+  exe "nnoremap ya".key." F".key."yf".value
+endfor
+
+" Folds
+nnoremap <Leader>z zMzvzz
+nnoremap <Leader><Enter> za
+vnoremap <Leader><Enter> za'
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
