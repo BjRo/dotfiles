@@ -30,18 +30,18 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
     "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
     "wan_ip 24 255" \
     "vcs_branch 255 235" \
-    "vcs_staged 1 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
-    "vcs_modified 1 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
-    "vcs_others 1 255" \
+    "vcs_staged 235 231 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
+    "vcs_modified 235 231 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
+    "vcs_others 235 231" \
  )
 fi
 
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
  TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-    "pwd 1 231" \
-    "battery 235 246" \
-    "date_day 235 246 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-    "date 235 246 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-    "time 235 246 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    "pwd 235 231" \
+    "battery 238 246" \
+    "date_day 252 234" \
+    "date 252 234 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    "time 252 234 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 )
 fi
