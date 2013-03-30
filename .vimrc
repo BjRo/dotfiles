@@ -176,6 +176,10 @@ let g:rubytest_cmd_spec = "bundle exec rspec %p"
 let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
 let g:jasmine_use_templates=""
 
+" Shortcuts for common vim operations
+map <Leader>s :w<CR>
+map <Leader>q :q!<CR>
+
 function! RunTestFile(...)
     let in_jasmine = match(expand("%"), "Spec.js$") != -1
     if in_jasmine
