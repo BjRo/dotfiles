@@ -20,6 +20,8 @@ export LANG=en_US.UTF-8
 # Path exports
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/lib/node_modules:$PATH
 
 # Editors
 export BUNDLER_EDITOR=vim
