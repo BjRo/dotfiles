@@ -25,10 +25,6 @@ export PATH=/usr/local/bin:$PATH
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
 
-#Use gcc instead of LLVM
-export CC=gcc-4.2
-export CXX=g++-4.2
-
 # TMUX
 alias tmux="TERM=screen-256color-bce tmux"
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
