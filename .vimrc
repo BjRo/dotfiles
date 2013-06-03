@@ -50,6 +50,17 @@ nnoremap <F3> :set hlsearch!<CR>
 "toogle paste mode
 nnoremap <F2> :set paste!<CR>
 
+"toggle numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <F4> :call NumberToggle()<CR>
+
 set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
@@ -61,7 +72,7 @@ set ttyfast
 set term=screen-256color
 set t_Co=256
 
-"folding settings
+" folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
@@ -71,16 +82,25 @@ set wildmode=full           "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
-"dont continue comments when pushing o/O
+" dont continue comments when pushing o/O
 set formatoptions-=o
 
-"use decimal number format for auto-increment/-decrement
+" use decimal number format for auto-increment/-decrement
 set nrformats=
 
 if has("autocmd")
-  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
+  " Kill all the whitespace
   autocmd BufWritePre *.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
+
+  " File recognition
+  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.hbs set filetype=html
+
+  " automatic number handling
+  autocmd FocusLost * :set number
+  autocmd InsertEnter * :set number
+  autocmd InsertLeave * :set relativenumber
+  autocmd CursorMoved * :set relativenumber
 end
 
 set autoindent
