@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="frontcube"
+ZSH_THEME="macovsky"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
@@ -52,3 +52,5 @@ alias lein="nocorrect lein"
 unsetopt auto_name_dirs
 
 source ~/.zshrc.local
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
