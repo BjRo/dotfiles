@@ -117,11 +117,22 @@ for [key, value] in items(pairs)
 endfor
 
 function! RunTestFile(...)
-    let in_jasmine = match(expand("%"), "Spec.js$") != -1
-    if in_jasmine
-      execute "JasmineRedGreen"
+    let in_elixir  = match(expand("%"), ".ex") != -1
+
+    if in_elixir
+      execute "!mix test"
     else
       execute "normal \<Plug>RubyFileRun"
+    end
+endfunction
+
+function! RunTestMethod(...)
+    let in_elixir  = match(expand("%"), ".ex") != -1
+
+    if in_elixir
+      execute "!mix test"
+    else
+      execute "normal \<Plug>RubyTestRun"
     end
 endfunction
 
@@ -142,7 +153,7 @@ vnoremap <Leader><Enter> za'
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <Leader>t <Plug>RubyTestRun
+nmap <Leader>t :call RunTestMethod()<cr>
 nmap <Leader>] <Plug>RubyFileRun
 nmap <Leader>lt <Plug>RubyTestRunLast
 nmap <Leader>T :call RunTestFile()<cr>
