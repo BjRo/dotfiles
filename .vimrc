@@ -76,7 +76,7 @@ let g:Powerline_symbols = 'fancy'
 
 if has("autocmd")
   " Kill all the whitespace
-  autocmd BufWritePre *.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
+  autocmd BufWritePre *.ex,*.exs,*.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
 
   " File recognition
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
