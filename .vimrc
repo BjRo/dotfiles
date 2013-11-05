@@ -119,20 +119,20 @@ for [key, value] in items(pairs)
 endfor
 
 function! RunTestFile(...)
-    let in_elixir  = match(expand("%"), ".ex") != -1
+    let in_elixir  = match(@%, ".exs") != -1
 
     if in_elixir
-      execute "!mix test"
+      execute "ExTestRunFile"
     else
       execute "normal \<Plug>RubyFileRun"
     end
 endfunction
 
 function! RunTestMethod(...)
-    let in_elixir  = match(expand("%"), ".ex") != -1
+    let in_elixir  = match(@%, ".exs") != -1
 
     if in_elixir
-      execute "!mix test"
+      execute "ExTestRunTest"
     else
       execute "normal \<Plug>RubyTestRun"
     end
