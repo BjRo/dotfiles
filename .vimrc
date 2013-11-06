@@ -118,26 +118,6 @@ for [key, value] in items(pairs)
   exe "nnoremap ya".key." F".key."yf".value
 endfor
 
-function! RunTestFile(...)
-    let in_elixir  = match(@%, ".exs") != -1
-
-    if in_elixir
-      execute "ExTestRunFile"
-    else
-      execute "normal \<Plug>RubyFileRun"
-    end
-endfunction
-
-function! RunTestMethod(...)
-    let in_elixir  = match(@%, ".exs") != -1
-
-    if in_elixir
-      execute "ExTestRunTest"
-    else
-      execute "normal \<Plug>RubyTestRun"
-    end
-endfunction
-
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -155,10 +135,6 @@ vnoremap <Leader><Enter> za'
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <Leader>t :call RunTestMethod()<cr>
-nmap <Leader>] <Plug>RubyFileRun
-nmap <Leader>lt <Plug>RubyTestRunLast
-nmap <Leader>T :call RunTestFile()<cr>
 map <Leader>s :w<CR>
 map <Leader>q :q!<CR>
 nmap <Leader>n  :CommandT<CR>
