@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/vim-extest"]
 	path = .vim/bundle/vim-extest
 	url = git@github.com:BjRo/vim-extest.git
+[submodule ".vim/bundle/vim-shimmer"]
+	path = .vim/bundle/vim-shimmer
+	url = https://github.com/BjRo/vim-shimmer.git
