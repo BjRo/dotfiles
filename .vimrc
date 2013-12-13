@@ -126,6 +126,10 @@ function! NumberToggle()
   endif
 endfunc
 
+" Highlight the 101 column when exceeded
+highlight ColorColumn ctermbg=166
+call matchadd('ColorColumn', '\%101v', 100)
+
 nnoremap <leader><leader> <c-^>                        " Switch between the last two files
 cnoremap %% <C-R>=expand('%:h').'/'<CR>                " Shortcut for expanding to the directory of the currently displayed file
 cnoremap $$ <C-R>=expand('%')<CR>                      " Shortcut for expanding to full filename of the currently displayed file
