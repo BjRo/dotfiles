@@ -131,8 +131,6 @@ highlight ColorColumn ctermbg=166
 call matchadd('ColorColumn', '\%101v', 100)
 
 nnoremap <leader><leader> <c-^>                        " Switch between the last two files
-cnoremap %% <C-R>=expand('%:h').'/'<CR>                " Shortcut for expanding to the directory of the currently displayed file
-cnoremap $$ <C-R>=expand('%')<CR>                      " Shortcut for expanding to full filename of the currently displayed file
 nnoremap <Leader>z zMzvzz
 nnoremap <Leader><Enter> za
 vnoremap <Leader><Enter> za'
@@ -157,6 +155,15 @@ nnoremap <F3> :set hlsearch!<CR>                        " toogle search highligh
 nnoremap <F2> :set paste!<CR>                           " toogle paste mode
 nnoremap <F4> :call NumberToggle()<CR>
 nnoremap <F5> :!ctags -R<CR>                            " ctags
+
+" Use semicolon to get into command mode
+noremap ; :
+
+" Shortcut for expanding to the directory of the currently displayed file
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+
+" Shortcut for expanding to full filename of the currently displayed file
+cnoremap $$ <C-R>=expand('%')<CR>
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
