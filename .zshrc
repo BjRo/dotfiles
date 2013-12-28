@@ -51,6 +51,9 @@ alias lein="nocorrect lein"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 unsetopt auto_name_dirs
 
+# Disable zsh autocorrection
+unsetopt correct_all
+
 source ~/.zshrc.local
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
