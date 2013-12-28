@@ -22,6 +22,7 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/lib/node_modules:$PATH
+export PATH=$PATH:$HOME/.rvm/bin
 
 # Editors
 export BUNDLER_EDITOR=vim
@@ -55,5 +56,3 @@ unsetopt auto_name_dirs
 unsetopt correct_all
 
 source ~/.zshrc.local
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
