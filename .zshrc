@@ -49,6 +49,11 @@ alias bo="bundle open"
 alias rake="noglob rake"
 alias lein="nocorrect lein"
 
+#general unix functionality
+alias cp="cp -i"
+alias rm="rm -i"
+alias mv="mv -i"
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 unsetopt auto_name_dirs
