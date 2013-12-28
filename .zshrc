@@ -40,6 +40,7 @@ alias br='git branch'
 alias br='git branch'
 alias pull='git pull'
 alias push='git push'
+alias fuckit='git clean -d -x -f; git reset --hard'
 
 # Bundler shortcuts
 alias be="bundle exec"
