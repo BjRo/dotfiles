@@ -53,6 +53,7 @@ alias lein="nocorrect lein"
 alias cp="cp -i"
 alias rm="rm -i"
 alias mv="mv -i"
+alias ls="ls -aF"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
