@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="macovsky"
-DISABLE_AUTO_UPDATE="true"
+ZSH_THEME="bureau"
+DISABLE_AUTO_UPDATE="false"
 DISABLE_LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
 plugins=(git brew)
