@@ -7,10 +7,6 @@ DISABLE_LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
 plugins=(git brew)
 
-# Make osx lion able to open up a tab in the same directory (again)
-precmd () {print -Pn "\e]2; %~/ \a"}
-preexec () {print -Pn "\e]2; %~/ \a"}
-
 source $ZSH/oh-my-zsh.sh
 
 # UTF-8 support
