@@ -8,9 +8,7 @@ filetype plugin indent on
 
 let mapleader = ","
 
-set background=light
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme railscasts
 
 set encoding=utf-8
 set fileencoding=utf-8
