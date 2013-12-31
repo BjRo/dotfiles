@@ -154,9 +154,6 @@ nnoremap <F2> :set paste!<CR>                           " toogle paste mode
 nnoremap <F4> :call NumberToggle()<CR>
 nnoremap <F5> :!ctags -R<CR>                            " ctags
 
-" Use semicolon to get into command mode
-noremap ; :
-
 " Shortcut for expanding to the directory of the currently displayed file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
