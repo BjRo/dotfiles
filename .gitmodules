@@ -91,3 +91,6 @@
 [submodule ".vim/bundle/vim-shimmer"]
 	path = .vim/bundle/vim-shimmer
 	url = https://github.com/BjRo/vim-shimmer.git
+[submodule ".vim/bundle/elixir-snippets"]
+	path = .vim/bundle/elixir-snippets
+	url = https://github.com/carlosgaldino/elixir-snippets.git
