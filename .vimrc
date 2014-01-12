@@ -56,6 +56,8 @@ set infercase
 set wmw=0
 set splitright
 set fillchars+=stl:\ ,stlnc:\       " Configure Powerline
+set noshowmode
+set ambiwidth=single
 
 let NERDTreeChDirMode=2
 let g:NERDTreeMapOpenVSplit = "C-v"
@@ -159,6 +161,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " Shortcut for expanding to full filename of the currently displayed file
 cnoremap $$ <C-R>=expand('%')<CR>
+
+" Powerline integration
+set rtp+=~/Coding/powerline/powerline/powerline/bindings/vim
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local

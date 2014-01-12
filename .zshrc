@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="bureau"
 DISABLE_AUTO_UPDATE="false"
 DISABLE_LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
@@ -26,7 +25,9 @@ export EDITOR=vim
 
 # TMUX
 alias tmux="TERM=screen-256color-bce tmux"
-export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+# Powerline
+source ~/Coding/powerline/powerline/powerline/bindings/zsh/powerline.zsh
 
 # git shortcuts
 alias g='git'
