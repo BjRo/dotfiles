@@ -19,9 +19,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/bundle/vim-rvm"]
-	path = .vim/bundle/vim-rvm
-	url = https://github.com/tpope/vim-rvm.git
 [submodule ".vim/bundle/zoom"]
 	path = .vim/bundle/zoom
 	url = https://github.com/taku-o/vim-zoom.git
@@ -67,12 +64,6 @@
 [submodule ".vim/bundle/jasmine"]
 	path = .vim/bundle/jasmine
 	url = git://github.com/claco/jasmine.vim.git
-[submodule ".vim/bundle/hardmode"]
-	path = .vim/bundle/hardmode
-	url = https://github.com/wikitopian/hardmode.git
-[submodule ".tmux/tmux-powerline"]
-	path = .tmux/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
 [submodule ".vim/bundle/vim-colorschemes"]
 	path = .vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
