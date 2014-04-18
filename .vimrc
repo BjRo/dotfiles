@@ -64,8 +64,6 @@ set noshowmode
 set ambiwidth=single
 
 let NERDTreeChDirMode=2
-let g:NERDTreeMapOpenVSplit = "C-v"
-let g:NERDTreeMapOpenSplit  = "C-s"
 let g:NERDTreeDirArrows=0
 let syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
