@@ -89,7 +89,7 @@ if has("gui_running")
   " Turn of menu and toolbar
   set guioptions-=T
   set guioptions-=m
-  set guifont=Menlo:h16
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 end
 
 highlight Pmenu ctermbg=grey ctermfg=black gui=bold
