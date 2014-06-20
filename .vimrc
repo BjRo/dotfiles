@@ -83,12 +83,6 @@ if has("autocmd")
   " File recognition
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.hbs set filetype=html
-
-  " automatic number handling
-  autocmd FocusLost * :set number
-  autocmd InsertEnter * :set number
-  autocmd InsertLeave * :set relativenumber
-  autocmd CursorMoved * :set relativenumber
 end
 
 if has("gui_running")
