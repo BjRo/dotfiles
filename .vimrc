@@ -90,6 +90,7 @@ if has("gui_running")
   set guioptions-=T
   set guioptions-=m
   set guifont=Source\ Code\ Pro\ for\ Powerline:h16
+  set macmeta
 end
 
 highlight Pmenu ctermbg=grey ctermfg=black gui=bold
@@ -141,8 +142,6 @@ nmap <leader>v  :CommandTJump<CR>
 nmap <leader>c  :CommandTTag<CR>
 noremap <leader>j <C-W>j<C-W>_
 noremap <leader>k <C-W>k<C-W>_
-nmap <leader>p :pu<CR>                                  " Pasting below the current line in normal mode
-nmap <leader>P :pu!<CR>                                 " Pasting below the current line in normal mode
 noremap <C-h> <C-w>h                                    " Split navigation
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -157,6 +156,10 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " Shortcut for expanding to full filename of the currently displayed file
 cnoremap $$ <C-R>=expand('%')<CR>
+
+" Yankstack bindings
+nmap <c-p> <Plug>yankstack_substitute_older_paste
+nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 " Powerline integration
 set rtp+=~/Coding/powerline/powerline/powerline/bindings/vim

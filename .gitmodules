@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/elixir-snippets"]
 	path = .vim/bundle/elixir-snippets
 	url = https://github.com/carlosgaldino/elixir-snippets.git
+[submodule ".vim/bundle/vim-yankstack"]
+	path = .vim/bundle/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
