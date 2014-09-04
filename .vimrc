@@ -14,6 +14,7 @@ colorscheme railscasts
 "colorscheme solarized
 "set background=light
 
+silent execute '!printf "\e]1;$(basename `pwd`)\a"'
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
