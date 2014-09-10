@@ -14,7 +14,10 @@ colorscheme railscasts
 "colorscheme solarized
 "set background=light
 
+" Set the tab title in iterm automatically
 silent execute '!printf "\e]1;$(basename `pwd`)\a"'
+auto VimLeave * :!printf "\e]1;bash\a"
+
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
