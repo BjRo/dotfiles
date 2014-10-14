@@ -1,0 +1,6 @@
+#Get the parent pid of a process
+cat /proc/1111/status | grep PPid
+ps -p 1111 -o ppid=
+
+#See all processes using ruby
+lsof | awk { "print $9" } | grep "/ruby" | sort | uniq
