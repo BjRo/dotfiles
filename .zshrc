@@ -18,6 +18,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/lib/node_modules:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
+export PATH=~/Library/Python/2.7/bin/:$PATH
 
 # Editors
 export BUNDLER_EDITOR=vim
