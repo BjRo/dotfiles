@@ -4,3 +4,8 @@ ps -p 1111 -o ppid=
 
 #See all processes using ruby
 lsof | awk { "print $9" } | grep "/ruby" | sort | uniq
+
+######## RAILS stuff #######
+
+#Stop all amqp workers
+bundle exec cap production duty_free:all:stop
