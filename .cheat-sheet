@@ -5,7 +5,32 @@ ps -p 1111 -o ppid=
 #See all processes using ruby
 lsof | awk { "print $9" } | grep "/ruby" | sort | uniq
 
+#Send msg via udp to an endpoint
+# nc is called netcat
+# -u for udp
+# -w 0 specifies the timeout in seconds
+echo "foo:1|c" | nc -u -w0 127.0.0.1 8125
+
+#Copy file and strip suffix of
+cp /opt/graphite/conf/storage-schemas.conf{.example,}
+
+######## OSX stuff #######
+
+# Force loading of a plist in launch control
+sudo launchctl load -w -F /path/to/myplist.plist
+
+  -w Overrides the Disabled key and sets it to false.
+  -F Force the loading of the plist. Ignore the Disabled key.
+
 ######## RAILS stuff #######
 
 #Stop all amqp workers
 bundle exec cap production duty_free:all:stop
+
+##### ERL stuff ####
+# Connect to erl node with observer enabled
+erl -name observer@127.0.0.1 -setcookie estatsd -s observer start -remsh estatsd@broker-4.monitor.fra2.xing.com
+
+######## XING stuff #######
+# Powerbroker based logins
+ssh xing-bjoern.rochel@broker-4.monitor.fra2.xing.com
