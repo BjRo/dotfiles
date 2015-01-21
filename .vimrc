@@ -18,6 +18,11 @@ colorscheme railscasts
 silent execute '!printf "\e]1;$(basename `pwd`)\a"'
 auto VimLeave * :!printf "\e]1;bash\a"
 
+" setup powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
@@ -164,9 +169,6 @@ cnoremap $$ <C-R>=expand('%')<CR>
 " Yankstack bindings
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
-
-" Powerline integration
-set rtp+=~/Coding/powerline/powerline/powerline/bindings/vim
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
