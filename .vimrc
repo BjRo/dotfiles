@@ -23,6 +23,8 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+set noeb
+set novb
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
