@@ -23,8 +23,6 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
-set noeb
-set novb
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
@@ -174,3 +172,6 @@ nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
+
+set noeb
+set novb
