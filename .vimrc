@@ -42,7 +42,7 @@ set vb
 set nobackup                        " No backup
 set noswapfile                      " No swap files
 set shell=/bin/sh                   " Ensure that shell with environment vars is loaded
-set clipboard^=unnamed              " clipboard integration
+set clipboard^=unnamedplus          " clipboard integration
 set expandtab                       " Spaces instead of tabs
 set tabstop=2                       " A tab is two colums
 set softtabstop=2                   " Amount of columns for backspace
