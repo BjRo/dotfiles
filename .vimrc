@@ -95,7 +95,7 @@ if has("autocmd")
   autocmd BufWritePre *.ex,*.exs,*.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
 
   " File recognition
-  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Rakefile set filetype=ruby
+  autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Appraisals,Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.hbs set filetype=html
 end
 
