@@ -72,6 +72,11 @@ set fillchars+=stl:\ ,stlnc:\       " Configure Powerline
 set noshowmode
 set ambiwidth=single
 
+"For vim-gitgutter
+set updatetime=750
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+
 let NERDTreeChDirMode=2
 let g:NERDTreeDirArrows=0
 let syntastic_auto_loc_list=1
@@ -159,6 +164,10 @@ nnoremap <F3> :set hlsearch!<CR>                        " toogle search highligh
 nnoremap <F2> :set paste!<CR>                           " toogle paste mode
 nnoremap <F4> :call NumberToggle()<CR>
 nnoremap <F5> :!ctags -R<CR>                            " ctags
+
+" Move between changed areas
+nmap <leader>h <Plug>GitGutterNextHunk
+nmap <leader>H <Plug>GitGutterPrevHunk
 
 " Shortcut for expanding to the directory of the currently displayed file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
