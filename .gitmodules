@@ -91,3 +91,9 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim/bundle/open-browser.vim"]
+	path = .vim/bundle/open-browser.vim
+	url = git@github.com:tyru/open-browser.vim.git
+[submodule ".vim/bundle/open-browser-github.vim"]
+	path = .vim/bundle/open-browser-github.vim
+	url = git@github.com:tyru/open-browser-github.vim.git
