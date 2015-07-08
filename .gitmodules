@@ -97,3 +97,6 @@
 [submodule ".vim/bundle/open-browser-github.vim"]
 	path = .vim/bundle/open-browser-github.vim
 	url = git@github.com:tyru/open-browser-github.vim.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
