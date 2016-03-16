@@ -5,7 +5,7 @@ filetype off
 "<<-VUNDLE
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"Plugin 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'wincent/Command-T'
 Plugin 'scrooloose/nerdcommenter'
