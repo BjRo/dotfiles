@@ -2,3 +2,4 @@
 .vim/share
 .vim/.netrwhist
 .vim/.VimballRecord
+.vim/bundle/*
