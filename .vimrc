@@ -1,15 +1,40 @@
-set nocompatible
-
-" Fire up pathogen
-call pathogen#infect()
-
 syntax on
-filetype plugin indent on
+set nocompatible
+filetype off
 
-let mapleader = ","
+"<<-VUNDLE
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"Plugin 'mileszs/ack.vim'
+Plugin 'docunext/closetag.vim'
+Plugin 'wincent/Command-T'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tyok/nerdtree-ack'
+Plugin 'tyru/open-browser-github.vim'
+Plugin 'tyru/open-browser.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/tlib'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'janko-m/vim-test'
+call vundle#end()
+filetype plugin indent on
+"VUNDLE
 
 colorscheme railscasts
-
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "set background=light
@@ -23,6 +48,7 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+let mapleader = ","
 set encoding=utf-8
 set fileencoding=utf-8
 set ttyfast
@@ -71,6 +97,8 @@ set splitright
 set fillchars+=stl:\ ,stlnc:\       " Configure Powerline
 set noshowmode
 set ambiwidth=single
+set noeb
+set novb
 
 "For vim-gitgutter
 set updatetime=750
@@ -166,6 +194,13 @@ nnoremap <F2> :set paste!<CR>                           " toogle paste mode
 nnoremap <F4> :call NumberToggle()<CR>
 nnoremap <F5> :!ctags -R<CR>                            " ctags
 
+" vim-test bindings
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>lt :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
 " Move between changed areas
 nmap <leader>h <Plug>GitGutterNextHunk
 nmap <leader>H <Plug>GitGutterPrevHunk
@@ -182,6 +217,3 @@ nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 " Machine dependend extension for vimrc
 source ~/.vimrc.local
-
-set noeb
-set novb
