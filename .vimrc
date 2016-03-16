@@ -112,10 +112,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['javascript'], 'passive_filetypes': ['ruby', 'css'] }
-let g:rubytest_cmd_spec = "bundle exec rspec %p"
-let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
-let g:jasmine_use_templates=""
 let g:Powerline_symbols = 'fancy'
 let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*"
 
