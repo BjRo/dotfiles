@@ -89,6 +89,7 @@ let g:rubytest_cmd_spec = "bundle exec rspec %p"
 let g:rubytest_cmd_example = "bundle exec rspec %p -l %c"
 let g:jasmine_use_templates=""
 let g:Powerline_symbols = 'fancy'
+let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*"
 
 if has("autocmd")
   " Kill all the whitespace
