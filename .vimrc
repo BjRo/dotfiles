@@ -30,6 +30,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'janko-m/vim-test'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'powerman/vim-plugin-AnsiEsc'
 call vundle#end()
 filetype plugin indent on
 "VUNDLE
