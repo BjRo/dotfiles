@@ -113,7 +113,7 @@ let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:Powerline_symbols = 'fancy'
-let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*"
+let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*,**/doc/*.html,**/node_modules/*"
 
 if has("autocmd")
   " Kill all the whitespace
