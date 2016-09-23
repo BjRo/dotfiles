@@ -127,7 +127,7 @@ let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*,**/doc/*.html,**/
 
 if has("autocmd")
   " Kill all the whitespace
-  autocmd BufWritePre *.ex,*.exs,*.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
+  autocmd BufWritePre *.md,*.ex,*.exs,*.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
 
   " File recognition
   autocmd BufNewFile,BufRead Gemfile,Thorfile,Guardfile,Appraisals,Rakefile set filetype=ruby
