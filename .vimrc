@@ -32,6 +32,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'janko-m/vim-test'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'powerman/vim-plugin-AnsiEsc'
+Plugin 'ngmy/vim-rubocop'
 call vundle#end()
 filetype plugin indent on
 "VUNDLE
