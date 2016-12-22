@@ -33,6 +33,8 @@ Plugin 'janko-m/vim-test'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'powerman/vim-plugin-AnsiEsc'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 "VUNDLE
@@ -41,15 +43,6 @@ colorscheme railscasts
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "set background=light
-
-" Set the tab title in iterm automatically
-silent execute '!printf "\e]1;$(basename `pwd`)\a"'
-auto VimLeave * :!printf "\e]1;bash\a"
-
-" setup powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 
 let mapleader = ","
 set encoding=utf-8
@@ -97,7 +90,6 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " Highlight trailing spaces
 set infercase
 set wmw=0
 set splitright
-set fillchars+=stl:\ ,stlnc:\       " Configure Powerline
 set noshowmode
 set ambiwidth=single
 set noeb
@@ -122,7 +114,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
 
-let g:Powerline_symbols = 'fancy'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*,**/doc/*.html,**/node_modules/*"
 
 if has("autocmd")
@@ -138,7 +132,6 @@ if has("gui_running")
   " Turn of menu and toolbar
   set guioptions-=T
   set guioptions-=m
-  set guifont=Source\ Code\ Pro\ for\ Powerline:h16
   set macmeta
 end
 
