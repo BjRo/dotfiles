@@ -3,4 +3,5 @@
 .vim/.netrwhist
 .vim/.VimballRecord
 .vim/bundle/*
+.vim/plugged/*
 .DS_Store

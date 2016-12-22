@@ -35,9 +35,10 @@ function fish_prompt
 end
 
 # Environment variables
+set -x TERM screen-256color-bce 
 set -x BUNDLER_EDITOR vim
 set -x EDITOR vim
-
+set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # Functions & aliases
 function st

@@ -3,41 +3,40 @@ set nocompatible
 filetype off
 
 "<<-VUNDLE
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'mileszs/ack.vim'
-Plugin 'docunext/closetag.vim'
-Plugin 'wincent/Command-T'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tyok/nerdtree-ack'
-Plugin 'tyru/open-browser-github.vim'
-Plugin 'tyru/open-browser.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/tlib'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'garbas/vim-snipmate'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'janko-m/vim-test'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'powerman/vim-plugin-AnsiEsc'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-call vundle#end()
+call plug#begin()
+Plug 'mileszs/ack.vim'
+Plug 'docunext/closetag.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tyok/nerdtree-ack'
+Plug 'tyru/open-browser-github.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/tlib'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'altercation/vim-colors-solarized'
+Plug 'flazz/vim-colorschemes'
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'vim-ruby/vim-ruby'
+Plug 'garbas/vim-snipmate'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'janko-m/vim-test'
+Plug 'slashmili/alchemist.vim'
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'ngmy/vim-rubocop'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf'
+call plug#end()
 filetype plugin indent on
-"VUNDLE
+"VIM-PLUG
 
 colorscheme railscasts
 "let g:solarized_termcolors=256
@@ -118,8 +117,6 @@ let g:airline#extensions#tabline#enabled= 1
 let g:airline_powerline_fonts= 1
 let g:airline_theme='powerlineish'
 
-let g:CommandTWildIgnore=&wildignore . ",**/_build/*,**/deps/*,**/doc/*.html,**/node_modules/*"
-
 if has("autocmd")
   " Kill all the whitespace
   autocmd BufWritePre *.md,*.ex,*.exs,*.rb,*.js,Gemfile,Thorfile,Guardfile,Rakefile,.vimrc,.gitconfig :%s/\s\+$//e
@@ -179,10 +176,7 @@ nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 map <Leader>s :w<CR>
 map <Leader>q :q!<CR>
-nmap <Leader>n  :CommandT<CR>
-nmap <leader>m  :CommandTBuffer<CR>
-nmap <leader>v  :CommandTJump<CR>
-nmap <leader>c  :CommandTTag<CR>
+nmap <Leader>n  :FZF<CR>
 noremap <leader>j <C-W>j<C-W>_
 noremap <leader>k <C-W>k<C-W>_
 noremap <C-h> <C-w>h                                    " Split navigation
