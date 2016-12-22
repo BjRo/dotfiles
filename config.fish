@@ -63,5 +63,3 @@ end
 function tmux
   env TERM=screen-256color-bce tmux $argv
 end
-
-rvm default
