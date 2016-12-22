@@ -64,3 +64,7 @@ end
 function tmux
   env TERM=screen-256color-bce tmux $argv
 end
+
+function zv
+  command fzf | read -l result; and vim $result
+end
