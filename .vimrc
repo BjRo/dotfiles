@@ -2,7 +2,7 @@ syntax on
 set nocompatible
 filetype off
 
-"<<-VUNDLE
+"<<-VIM-PLUG
 call plug#begin()
 Plug 'mileszs/ack.vim'
 Plug 'docunext/closetag.vim'
