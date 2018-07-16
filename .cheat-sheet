@@ -33,7 +33,3 @@ bundle exec  cap duty_free:amqp_worker:remove_template
 ##### ERL stuff ####
 # Connect to erl node with observer enabled
 erl -name observer@127.0.0.1 -setcookie estatsd -s observer start -remsh estatsd@broker-4.monitor.fra2.xing.com
-
-######## XING stuff #######
-# Powerbroker based logins
-ssh xing-bjoern.rochel@broker-4.monitor.fra2.xing.com
