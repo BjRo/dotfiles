@@ -21,15 +21,3 @@ sudo launchctl load -w -F /path/to/myplist.plist
 
   -w Overrides the Disabled key and sets it to false.
   -F Force the loading of the plist. Ignore the Disabled key.
-
-######## RAILS stuff #######
-
-#Stop all amqp workers
-bundle exec cap production duty_free:all:stop
-
-#remove templates after worker has been removed
-bundle exec  cap duty_free:amqp_worker:remove_template
-
-##### ERL stuff ####
-# Connect to erl node with observer enabled
-erl -name observer@127.0.0.1 -setcookie estatsd -s observer start -remsh estatsd@broker-4.monitor.fra2.xing.com
