@@ -187,9 +187,6 @@ highlight ColorColumn ctermbg=166
 call matchadd('ColorColumn', '\%101v', 100)
 
 nnoremap <leader><leader> <c-^>                        " Switch between the last two files
-nnoremap <Leader>z zMzvzz
-nnoremap <Leader><Enter> za
-vnoremap <Leader><Enter> za'
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
