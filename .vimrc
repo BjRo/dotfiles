@@ -33,7 +33,11 @@ Plug 'ngmy/vim-rubocop'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf'
-Plug 'jparise/vim-graphql'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "language server
 call plug#end()
 filetype plugin indent on
 "VIM-PLUG
@@ -116,6 +120,21 @@ let g:syntastic_enable_elixir_checker= 1
 let g:airline#extensions#tabline#enabled= 1
 let g:airline_powerline_fonts= 1
 let g:airline_theme='powerlineish'
+
+" CoC extensions
+" https://pragmaticpineapple.com/ultimate-vim-typescript-setup/
+let g:coc_global_extensions = ['coc-tsserver']
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 if has("autocmd")
   " Kill all the whitespace
