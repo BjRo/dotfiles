@@ -38,11 +38,13 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "language server
+Plug 'morhetz/gruvbox'            " Intellij color scheme
 call plug#end()
 filetype plugin indent on
 "VIM-PLUG
 
-colorscheme railscasts
+colorscheme gruvbox
+"colorscheme railscasts
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "set background=light
